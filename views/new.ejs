@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>-: Create :-</title>
+</head>
+
+<body>
+    <h1>Ajouter un livre :</h1>
+    <hr>
+    <form action="/catalogue/new" method="post">
+        <table>
+            <tr>
+                <td width="120">Auteur :</td>
+                <td><input type="text" name="author" required /></td>
+            </tr>
+            <tr>
+                <td width="120">Titre :</td>
+                <td><input type="text" name="title" required /></td>
+            </tr>
+            <tr>
+                <td width="50">Année de parution:</td>
+                <td><input type="text" name="release" required /></td>
+            </tr>
+            <tr>
+                <td width="50">Genre (roman, essai, etc...) :</td>
+                <td><input type="text" name="categorie" required/></td>
+            </tr>
+            <tr>
+                <td width="50">Image (nom du fichier et extension) :</td>
+                <td><input type="text" name="image" value="./images/" /></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Valider" />
+        <a href="http://localhost:3000/catalogue">Retour</a>
+        <hr>
+        <footer>
+            <p>© Copyright 2021 - QooPhee</p>
+        </footer>
+        </home>
+
+</html>

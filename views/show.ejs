@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>-: Read :-</title>
+</head>
+
+<body>
+    <h1>
+        <%=book.title%> de
+            <%=book.author%>
+    </h1>
+    <hr>
+    <form action="/catalogue" method="get">
+        <table>
+            <tr>
+                <td><span>Auteur :</span></td><br>
+                <td>
+                    <%=book.author%>
+                </td>
+            </tr>
+            <tr>
+                <td><span>Titre :</span></td>
+                <td>
+                    <%=book.title%>
+                </td>
+            </tr>
+            <tr>
+                <td><span>Année de parution :</span></td>
+                <td>
+                    <%=book.release%>
+                </td>
+            </tr>
+            <tr>
+                <td><span>Genre :</span></td>
+                <td>
+                    <%=book.categorie%>
+                </td>
+            </tr>
+            <tr>
+                <td><span>Description :</span></td>
+                <td>
+                    "Une description plus détaillée de l'oeuvre aura sa place ici..."
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Retour à la liste complète" />
+    </form>
+    <hr>
+    <footer>
+        <p>© Copyright 2021 - QooPhee</p>
+    </footer>
+</body>
+
+</html>

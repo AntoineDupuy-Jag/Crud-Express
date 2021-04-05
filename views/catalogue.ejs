@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>-: Catalogue :-</title>
+</head>
+
+<body>
+    <h1>Livres dans l'univers 'A Song of Ice and Fire'</h1>
+    <hr>
+    <% if ( !listBooks.length ) { %>
+        <br/>
+        <b>No books registered yet !</b>
+        <br/>
+        <% } else { %>
+            <section class="catalogue">
+                <% for (var i=0; i < listBooks.length; i++) { %>
+                    <div class="card" style="width: 18rem;">
+                        <img src="<%=listBooks[i].image %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=listBooks[i].title %>
+                            </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><span>Auteur :</span>
+                                <%= listBooks[i].author %>
+                            </li>
+                            <li class="list-group-item"><span>Année de parution :</span>
+                                <%= listBooks[i].release %>
+                            </li>
+                            <li class="list-group-item"><span>N° ou catégorie :</span>
+                                <%= listBooks[i].categorie %>
+                            </li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="/catalogue/<%=listBooks[i].id %>" class="card-link">Détails</a>
+                            <a href="/catalogue/<%=listBooks[i].id %>/edit" class="card-link">Modifier</a>
+                            <a href="/catalogue/<%=listBooks[i].id %>/delete" class="card-link">Supprimer</a>
+                        </div>
+                    </div>
+                    <% } %>
+            </section>
+            <% } %>
+                <br>
+                <hr>
+                <form action="catalogue/new">
+                    <input type="submit" value="Ajouter un livre" />
+                </form>
+                <br>
+                <footer>
+                    <p>© Copyright 2021 - QooPhee</p>
+                </footer>
+</body>
+
+</html>

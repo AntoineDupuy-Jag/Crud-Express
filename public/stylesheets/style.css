@@ -1,0 +1,71 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: lightgrey;
+}
+
+a {
+    color: #00B7FF;
+}
+
+a:hover {
+    background-color: #00B7FF;
+    color: rgba(0, 0, 0, 0.651);
+    padding: 6px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.catalogue {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img-top {
+    height: 380px;
+}
+
+.card {
+    margin: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: darkslategrey;
+    font: "Lucida Grande", Helvetica, Arial, sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-text-stroke-color: rgb(28, 28, 28);
+    -webkit-text-stroke-width: 1px;
+    font-size: 32px;
+}
+
+td {
+    width: 150px;
+}
+
+input {
+    border-radius: 5px;
+    margin: 10px;
+    width: 170px;
+    height: 30px;
+}
+
+input:hover {
+    background-color: darkslategray;
+    color: whitesmoke;
+}
+
+span {
+    font-weight: bold;
+}
+
+footer {
+    font-weight: bold;
+    letter-spacing: 3px;
+}
